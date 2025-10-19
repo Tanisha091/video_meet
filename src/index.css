@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 210 40% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 40% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 12%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    --primary-glow: 210 100% 65%;
+
+    --secondary: 210 20% 95%;
+    --secondary-foreground: 210 40% 20%;
+
+    --muted: 210 20% 92%;
+    --muted-foreground: 210 15% 45%;
+
+    --accent: 207 90% 54%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 210 100% 50%;
+
+    --radius: 0.75rem;
+    
+    /* Video call specific colors */
+    --video-bg: 220 20% 18%;
+    --control-bar: 220 25% 15%;
+    --chat-bg: 0 0% 100%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 50%), hsl(207 90% 54%));
+    --gradient-hero: linear-gradient(180deg, hsl(210 40% 98%), hsl(210 30% 94%));
+    
+    /* Shadows */
+    --shadow-elegant: 0 10px 40px -10px hsl(210 100% 50% / 0.2);
+    --shadow-video: 0 4px 20px hsl(220 20% 10% / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 220 25% 12%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 25% 15%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 25% 15%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 100% 55%;
+    --primary-foreground: 0 0% 100%;
+    
+    --primary-glow: 210 100% 70%;
+
+    --secondary: 220 20% 22%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 20% 20%;
+    --muted-foreground: 210 20% 65%;
+
+    --accent: 207 90% 54%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 25%;
+    --input: 220 20% 25%;
+    --ring: 210 100% 55%;
+    
+    --video-bg: 220 25% 10%;
+    --control-bar: 220 30% 8%;
+    --chat-bg: 220 25% 15%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 55%), hsl(207 90% 54%));
+    --gradient-hero: linear-gradient(180deg, hsl(220 25% 12%), hsl(220 25% 8%));
+    
+    --shadow-elegant: 0 10px 40px -10px hsl(210 100% 50% / 0.4);
+    --shadow-video: 0 4px 20px hsl(0 0% 0% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
